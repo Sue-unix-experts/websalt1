@@ -13,17 +13,7 @@
     <section>
       <div class="container">
         <h1>DrySalt's obviously salted caramel</h1>
-        <?php
-        $id='unknown';
-        foreach ( file('/etc/salt/minion') as $line) {
-          list($key,$val)=explode(": ",$line);
-          if ( $key == "id") {
-            $id=$val;
-            break;
-          }
-        }
-        ?>
-        <h3>running on <?php echo $id; ?>/<?php echo $_SERVER['SERVER_ADDR']; ?></h3>
+        <h3>running on <?php echo $_SERVER['SERVER_ADDR']; ?></h3>
       </div>
     </section>
 
